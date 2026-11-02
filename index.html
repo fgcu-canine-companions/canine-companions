@@ -120,6 +120,9 @@ nav.links a{
 }
 nav.links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--blue-deep);transition:right .2s ease}
 nav.links a:hover::after,nav.links a.active::after{right:0}
+nav.links a.has-flag::before{content:attr(data-flag);position:absolute;left:50%;bottom:100%;transform:translateX(-50%);margin-bottom:-2px;
+  font-size:12px;font-weight:800;letter-spacing:.02em;line-height:1;white-space:nowrap;color:var(--blue-deep)}
+#mobileNav a.has-flag::before{content:attr(data-flag);display:block;font-size:13px;font-weight:800;letter-spacing:.02em;color:var(--blue-deep);margin-bottom:3px}
 .bar-actions{display:flex;align-items:center;gap:12px}
 #searchBtn{width:46px;height:46px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer}
 #searchBtn:hover{border-color:var(--blue);color:var(--blue)}
@@ -463,11 +466,11 @@ footer a:hover{color:#fff;text-decoration:underline}
     </a>
     <nav class="links" aria-label="Main">
       <a href="#/home">Home</a>
+      <a href="#/events" class="has-flag" data-flag="Upcoming!">Events</a>
       <a href="#/our-dogs">Service dogs</a>
       <a href="#/apply">Apply</a>
       <a href="#/puppy-raising">Get involved</a>
       <a href="#/stories">Stories</a>
-      <a href="#/events">Events</a>
       <a href="#/locations">Locations</a>
       <a href="#/who-we-are">About</a>
     </nav>
@@ -483,12 +486,12 @@ footer a:hover{color:#fff;text-decoration:underline}
   </div>
   <div class="wrap"><nav id="mobileNav" aria-label="Mobile">
     <a href="#/home">Home</a>
+    <a href="#/events" class="has-flag" data-flag="Upcoming!">Events</a>
     <a href="#/our-dogs">Service dogs</a>
     <a href="#/apply">Apply</a>
     <a href="#/puppy-raising">Puppy raising</a>
     <a href="#/volunteer">Volunteer</a>
     <a href="#/stories">Stories</a>
-    <a href="#/events">Events</a>
     <a href="#/locations">Locations</a>
     <a href="#/who-we-are">About</a>
     <a href="#/donate">Donate</a>
